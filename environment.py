@@ -38,7 +38,7 @@ GPIO.setup(BUTTON_PIN1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(BUTTON_PIN2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Redis connection
-REDIS_HOST = "54.79.123.103"
+REDIS_HOST = ""
 REDIS_PORT = 6379
 CHANNEL_NAME = "test"
 
@@ -134,7 +134,7 @@ def read_dust_sensor():
             time.sleep(0.00968)
         
             calVoltage = adc_value * (5.0 / 1024.0)
-            reading = abs((calVoltage - 0.5) * 170)
+            reading = (calVoltage - 0.5) * 170
             
             if reading >= 0:
                 total_dust += reading
