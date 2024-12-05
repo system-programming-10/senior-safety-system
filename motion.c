@@ -21,7 +21,7 @@
 
 #define FILTER_SIZE 5
 
-const char *REDIS_HOST = "54.79.123.103";  // Redis server IP
+const char *REDIS_HOST = "";  // Redis server IP
 int REDIS_PORT = 6379; 
 
 volatile int pir_state = 0;
